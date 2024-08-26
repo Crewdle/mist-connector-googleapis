@@ -1,5 +1,5 @@
 {
-  "name": "mist-connector-googleapis",
+  "name": "@crewdle/mist-connector-googleapis",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
