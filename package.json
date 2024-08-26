@@ -1,0 +1,33 @@
+{
+  "name": "mist-connector-googleapis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "copy-sdk-types": "cp -r ../web-sdk-types/dist ./node_modules/@crewdle/web-sdk-types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crewdle/mist-connector-googleapis.git"
+  },
+  "keywords": [],
+  "author": "Crewdle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crewdle/mist-connector-googleapis/issues"
+  },
+  "homepage": "https://github.com/Crewdle/mist-connector-googleapis#readme",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "googleapis": "^142.0.0"
+  },
+  "devDependencies": {
+    "@crewdle/web-sdk-types": "^1.0.19",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4"
+  }
+}
