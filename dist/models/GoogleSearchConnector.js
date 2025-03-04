@@ -1,11 +1,15 @@
 export class GoogleSearchConnector {
-    async search(query, apiKey, searchEngineId) {
+    apiKey;
+    constructor(apiKey) {
+        this.apiKey = apiKey;
+    }
+    async search(query, searchEngineId) {
         const { google } = await import('googleapis');
         const customsearch = google.customsearch('v1');
         const res = await customsearch.cse.list({
             cx: searchEngineId,
             q: query,
-            auth: apiKey,
+            auth: this.apiKey,
         });
         if (!res.data.items) {
             throw new Error('No search results');
