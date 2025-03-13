@@ -1,14 +1,20 @@
 import { ISearchConnector, ISearchConnectorResult } from '@crewdle/web-sdk-types';
 
 export class GoogleSearchConnector implements ISearchConnector {
-  async search(query: string, apiKey: string, searchEngineId: string): Promise<ISearchConnectorResult[]> {
+  private apiKey: string;
+
+  constructor(apiKey: string) {
+    this.apiKey = apiKey;
+  }
+
+  async search(query: string, searchEngineId: string): Promise<ISearchConnectorResult[]> {
     const { google } = await import('googleapis');
     const customsearch = google.customsearch('v1');
 
     const res = await customsearch.cse.list({
       cx: searchEngineId,
       q: query,
-      auth: apiKey,
+      auth: this.apiKey,
     });
     
     if (!res.data.items) {
