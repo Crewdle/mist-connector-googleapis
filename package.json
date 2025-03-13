@@ -1,6 +1,6 @@
 {
   "name": "@crewdle/mist-connector-googleapis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -26,7 +26,7 @@
     "googleapis": "^142.0.0"
   },
   "devDependencies": {
-    "@crewdle/web-sdk-types": "^1.0.19",
+    "@crewdle/web-sdk-types": "^1.0.34",
     "@types/node": "^22.0.0",
     "typescript": "^5.5.4"
   }
